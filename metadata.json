@@ -1,0 +1,6 @@
+{
+  "name": "byrohaa | Modest Clothing Brand",
+  "description": "Contemporary luxury Muslim women clothing brand featuring abayas, hijabs, modest sets, collection manager, built-in photo editor, and secure checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
