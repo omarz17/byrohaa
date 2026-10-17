@@ -1,21 +1,74 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>byrohaa | Modest Clothing Brand</title>
-    <meta name="description" content="Contemporary luxury Muslim women clothing brand featuring abayas, hijabs, modest sets, collection manager, built-in photo editor, and secure checkout." />
-    <meta property="og:title" content="byrohaa | Modest Clothing Brand" />
-    <meta property="og:description" content="Contemporary luxury Muslim women clothing brand featuring abayas, hijabs, modest sets, collection manager, built-in photo editor, and secure checkout." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-[#FAF8F5] text-[#24211E] antialiased selection:bg-[#E8DCCF] selection:text-[#1A1816]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="بيروحاء — أزياء محتشمة بروح سعودية معاصرة." />
+  <title>بيروحاء | Byrohaa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">خصم 10٪ عند إنشاء حساب جديد <span>·</span> توصيل إلى جميع الدول العربية</div>
+  <header class="site-header">
+    <button class="icon-btn menu-toggle" aria-label="فتح القائمة">☰</button>
+    <nav class="main-nav" aria-label="التنقل الرئيسي">
+      <a href="#shop">المتجر</a><a href="#story">عن بيروحاء</a><a href="#journal">المجلة</a><a href="#contact">تواصل معنا</a>
+    </nav>
+    <a class="brand" href="#top" aria-label="بيروحاء الرئيسية"><span>بيروحاء</span><small>BYROHAA</small></a>
+    <div class="header-actions">
+      <button class="language-btn" id="languageBtn">EN</button>
+      <button class="icon-btn" id="accountBtn" aria-label="الحساب">♙</button>
+      <button class="icon-btn cart-trigger" id="cartBtn" aria-label="سلة التسوق">♧<b id="cartCount">0</b></button>
+    </div>
+  </header>
 
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">مجموعة 01 · أزياء محتشمة</p>
+        <h1>أناقة هادئة،<br><em>حضور لا يُنسى.</em></h1>
+        <p class="hero-text">تصاميم عبايات تنسج بين الروح السعودية المعاصرة وجمال الاحتشام. قطع صُنعت لترافقك بثقة، كل يوم.</p>
+        <a class="button button-dark" href="#shop">اكتشفي المجموعة <span>←</span></a>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image"><img src="assets/abaya-ivory.jpg" alt="عباية بيروحاء العاجية" /></div>
+        <div class="hero-stamp">صُنعت<br><span>بهدوء</span></div>
+        <div class="hero-caption">THE QUIET<br>COLLECTION <span>01</span></div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="story">
+      <p class="eyebrow">مبدأ بيروحاء</p>
+      <h2>جودة تُلمس.<br><i>وهوية تُرى.</i></h2>
+      <p>نؤمن أن الأناقة لا تحتاج إلى ضجيج. في بيروحاء، نصمم قطعاً محتشمة بخامات مريحة وتفاصيل دقيقة، بسعر عادل وجودة تبقى معك.</p>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">اختاري إطلالتك</p><h2>المجموعة الحالية</h2></div><a href="#shop" class="text-link">عرض الكل <span>←</span></a></div>
+      <div class="shop-toolbar"><div class="filters"><button class="filter active" data-filter="all">الكل</button><button class="filter" data-filter="new">وصل حديثاً</button><button class="filter" data-filter="signature">التوقيع</button></div><select id="sortSelect" aria-label="ترتيب المنتجات"><option value="featured">ترتيب: مميز</option><option value="low">السعر: الأقل</option><option value="high">السعر: الأعلى</option></select></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="editorial" id="journal">
+      <div class="editorial-image"><img src="assets/abaya-olive.jpg" alt="عباية بيروحاء الزيتونية" /></div>
+      <div class="editorial-copy"><p class="eyebrow">من المجلة</p><h2>الاحتشام<br><i>بأسلوبك.</i></h2><p>قطعة واحدة، طرق لا تنتهي لارتدائها. تعرفي على أسلوب تنسيق العباية الزيتونية من مجموعة بيروحاء الأولى.</p><a href="#story" class="button button-light">اقرئي القصة <span>←</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-brand"><div class="brand"><span>بيروحاء</span><small>BYROHAA</small></div><p>أزياء محتشمة بروح سعودية معاصرة.</p></div>
+    <div class="footer-col"><h3>المتجر</h3><a href="#shop">كل المنتجات</a><a href="#shop">وصل حديثاً</a><a href="#shop">دليل المقاسات</a></div>
+    <div class="footer-col"><h3>المساعدة</h3><a href="#contact">الشحن والتوصيل</a><a href="#contact">الاستبدال والاسترجاع</a><a href="#contact">الأسئلة الشائعة</a></div>
+    <div class="footer-col"><h3>كوني على تواصل</h3><p>تابعي جديد بيروحاء.</p><div class="socials"><a href="https://www.facebook.com/profile.php?id=100057558815265" target="_blank" rel="noreferrer">Facebook</a><a href="#" aria-label="Instagram placeholder">Instagram</a><a href="#" aria-label="TikTok placeholder">TikTok</a></div></div>
+    <div class="footer-bottom"><span>© 2026 Byrohaa. جميع الحقوق محفوظة.</span><span>صُمم بحب للمرأة العربية.</span></div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-label="سلة التسوق"><div class="drawer-header"><h2>سلتك</h2><button class="close-btn" id="closeCart">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-total"><span>الإجمالي</span><strong id="cartTotal">$0</strong></div><button class="button button-dark full" id="checkoutBtn">متابعة إلى الدفع</button><p class="small-note">الدفع عند الاستلام متاح حالياً.</p></aside><div class="overlay" id="overlay"></div>
+  <div class="checkout-modal" id="checkoutModal"><button class="close-btn" id="closeCheckout">×</button><div class="checkout-heading"><p class="eyebrow">الخطوة الأخيرة</p><h2>أكملي طلبك</h2><p>سنصل إليك لتأكيد الطلب قبل الشحن.</p></div><form id="checkoutForm"><div class="form-grid"><label>الاسم الكامل<input required name="name" placeholder="اكتبي اسمك الكامل"></label><label>رقم الهاتف<input required name="phone" type="tel" placeholder="+966 ..."></label><label>البريد الإلكتروني<input name="email" type="email" placeholder="name@example.com"></label><label>الدولة<select required name="country"><option value="">اختاري الدولة</option><option>مصر</option><option>المملكة العربية السعودية</option><option>الإمارات العربية المتحدة</option><option>الكويت</option><option>قطر</option><option>البحرين</option><option>عُمان</option><option>الأردن</option><option>لبنان</option><option>المغرب</option><option>الجزائر</option><option>تونس</option><option>العراق</option><option>دولة عربية أخرى</option></select></label><label>المدينة<input required name="city" placeholder="المدينة"></label><label>العنوان بالتفصيل<textarea required name="address" rows="2" placeholder="الحي، الشارع، رقم المبنى"></textarea></label></div><div class="checkout-summary"><div><span>قيمة المنتجات</span><strong id="checkoutSubtotal">$0</strong></div><div><span>التوصيل</span><strong>يُحدد لاحقاً</strong></div><div class="summary-total"><span>الإجمالي عند الاستلام</span><strong id="checkoutTotal">$0</strong></div></div><div class="payment-note"><span>◉</span><div><strong>الدفع عند الاستلام</strong><small>سنتواصل معك لتأكيد تفاصيل الطلب.</small></div></div><button class="button button-dark full" type="submit">تأكيد الطلب <span>←</span></button></form><div class="order-success" id="orderSuccess"><div class="success-mark">✓</div><h2>شكراً لثقتك بنا</h2><p>تم استلام طلبك بنجاح. سيصلك اتصال من فريق بيروحاء قريباً لتأكيده.</p><button class="button button-dark" id="continueShopping">العودة للمتجر</button></div></div>
+  <div class="modal" id="accountModal"><button class="close-btn" id="closeAccount">×</button><p class="eyebrow">مرحباً بك في بيروحاء</p><h2>خصم 10٪<br><i>لأول طلب.</i></h2><p>أنشئي حساباً بسيطاً لتحصلي على خصمك وتتابعي طلباتك بسهولة.</p><input id="accountEmail" type="email" placeholder="بريدك الإلكتروني" aria-label="البريد الإلكتروني"><button class="button button-dark full" id="signupBtn">إنشاء حساب</button><p class="small-note">أو تابعي كزائرة عند الدفع.</p></div>
+  <script src="app.js"></script>
+</body>
+</html>
